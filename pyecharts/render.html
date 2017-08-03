@@ -1,0 +1,298 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+    <script src="http://oog4yfyu0.bkt.clouddn.com/echarts.min.js"></script>
+    <script src="http://oog4yfyu0.bkt.clouddn.com/echarts-gl.js"></script>
+    <script type="text/javascript " src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
+    <script type="text/javascript " src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/wordcloud.js"></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/anhui.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/aomen.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/beijing.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/chongqing.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/fujian.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/gansu.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/guangdong.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/guangxi.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/guizhou.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/hainan.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/hebei.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/heilongjiang.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/henan.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/hubei.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/hunan.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/jiangsu.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/jiangxi.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/jilin.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/liaoning.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/neimenggu.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/ningxia.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/qinghai.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/shangdong.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/shanghai.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/shanxi.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/sichuan.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/taiwan.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/tianjin.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/xianggang.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/xinjiang.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/xizang.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/yunnan.js "></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/zhejiang.js "></script>
+</head>
+
+<body>
+    <div id="main" style="width:800px;height:400px;"></div>
+    <script type="text/javascript">
+        var myChart = echarts.init(document.getElementById('main'));
+        var option = {
+    "_index_flag": 1304748, 
+    "backgroundColor": "#fff", 
+    "title": [
+        {
+            "textStyle": {
+                "color": "#000", 
+                "fontSize": 18
+            }, 
+            "subtext": "precipitation and evaporation one year", 
+            "text": "MyBar", 
+            "top": "auto", 
+            "subtextStyle": {
+                "color": "#aaa", 
+                "fontSize": 12
+            }, 
+            "left": "auto"
+        }
+    ], 
+    "color": [
+        "#c23531", 
+        "#2f4554", 
+        "#61a0a8", 
+        "#d48265", 
+        "#749f83", 
+        "#ca8622", 
+        "#bda29a", 
+        "#6e7074", 
+        "#546570", 
+        "#c4ccd3", 
+        "#f05b72", 
+        "#ef5b9c", 
+        "#f47920", 
+        "#905a3d", 
+        "#fab27b", 
+        "#2a5caa", 
+        "#444693", 
+        "#726930", 
+        "#b2d235", 
+        "#6d8346", 
+        "#ac6767", 
+        "#1d953f", 
+        "#6950a1", 
+        "#918597", 
+        "#f6f5ec"
+    ], 
+    "series": [
+        {
+            "markLine": {
+                "data": [
+                    {
+                        "type": "average", 
+                        "name": "平均値"
+                    }
+                ]
+            }, 
+            "name": "precipitation", 
+            "markPoint": {
+                "data": [
+                    {
+                        "symbol": "pin", 
+                        "label": {
+                            "normal": {
+                                "textStyle": {
+                                    "color": "#fff"
+                                }
+                            }
+                        }, 
+                        "type": "max", 
+                        "name": "最大值", 
+                        "symbolSize": 50
+                    }, 
+                    {
+                        "symbol": "pin", 
+                        "label": {
+                            "normal": {
+                                "textStyle": {
+                                    "color": "#fff"
+                                }
+                            }
+                        }, 
+                        "type": "min", 
+                        "name": "最小值", 
+                        "symbolSize": 50
+                    }
+                ]
+            }, 
+            "data": [
+                1.711042014669903, 
+                0.4297168713166656, 
+                -1.0352074914842064, 
+                -1.69295527152522, 
+                -2.178544847642267, 
+                -0.7655613612361057
+            ], 
+            "indexflag": 1304748, 
+            "type": "bar", 
+            "stack": "", 
+            "label": {
+                "emphasis": {
+                    "show": true
+                }, 
+                "normal": {
+                    "position": "top", 
+                    "textStyle": {
+                        "color": "#000", 
+                        "fontSize": 12
+                    }, 
+                    "formatter": null, 
+                    "show": false
+                }
+            }
+        }, 
+        {
+            "markLine": {
+                "data": [
+                    {
+                        "type": "average", 
+                        "name": "平均値"
+                    }
+                ]
+            }, 
+            "name": "evaporation", 
+            "markPoint": {
+                "data": [
+                    {
+                        "symbol": "pin", 
+                        "label": {
+                            "normal": {
+                                "textStyle": {
+                                    "color": "#fff"
+                                }
+                            }
+                        }, 
+                        "type": "max", 
+                        "name": "最大值", 
+                        "symbolSize": 50
+                    }, 
+                    {
+                        "symbol": "pin", 
+                        "label": {
+                            "normal": {
+                                "textStyle": {
+                                    "color": "#fff"
+                                }
+                            }
+                        }, 
+                        "type": "min", 
+                        "name": "最小值", 
+                        "symbolSize": 50
+                    }
+                ]
+            }, 
+            "data": [
+                1.8502197234252489, 
+                0.9899616882351252, 
+                -0.5924001365534161, 
+                0.9973833364507778, 
+                -1.3295915589614875, 
+                -0.08830977808890302
+            ], 
+            "indexflag": 1304748, 
+            "type": "bar", 
+            "stack": "", 
+            "label": {
+                "emphasis": {
+                    "show": true
+                }, 
+                "normal": {
+                    "position": "top", 
+                    "textStyle": {
+                        "color": "#000", 
+                        "fontSize": 12
+                    }, 
+                    "formatter": null, 
+                    "show": false
+                }
+            }
+        }
+    ], 
+    "yAxis": [
+        {
+            "nameLocation": "middle", 
+            "nameGap": 25, 
+            "name": "", 
+            "axisLabel": {
+                "formatter": "{value} "
+            }, 
+            "type": "value", 
+            "nameTextStyle": {
+                "fontSize": 14
+            }
+        }
+    ], 
+    "tooltip": {}, 
+    "xAxis": [
+        {
+            "nameLocation": "middle", 
+            "nameGap": 25, 
+            "name": "", 
+            "type": "category", 
+            "axisLabel": {
+                "interval": "auto"
+            }, 
+            "data": [
+                "2017-03-31", 
+                "2017-04-30", 
+                "2017-05-31", 
+                "2017-06-30", 
+                "2017-07-31", 
+                "2017-08-31"
+            ], 
+            "nameTextStyle": {
+                "fontSize": 14
+            }
+        }
+    ], 
+    "toolbox": {
+        "feature": {
+            "saveAsImage": {
+                "show": true
+            }
+        }, 
+        "top": "center", 
+        "left": "right", 
+        "orient": "vertical", 
+        "show": true
+    }, 
+    "legend": [
+        {
+            "show": true, 
+            "top": "top", 
+            "selectedMode": "multiple", 
+            "data": [
+                "precipitation", 
+                "evaporation"
+            ], 
+            "orient": "horizontal", 
+            "left": "center"
+        }
+    ]
+};
+        myChart.setOption(option);
+    </script>
+</body>
+
+</html>
